@@ -1,0 +1,35 @@
+
+<div class="alertBox"></div>
+<div (dblclick)='doblClick()' id="wrapper" #video_wrap class="div div__videoWrapper">
+
+  <video
+
+
+  id="my-video"
+  class="vjs-matrix video-js video-js vjs-big-play-centered"
+  controls
+  preload="auto"
+
+
+  data-setup='{ "playbackRates": [0.5, 1, 2] }'
+>
+
+  <source   src="assets/Videos/test.mp4" type="video/mp4"/>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a
+    web browser that
+    <a href="https://videojs.com/html5-video-support/" target="_blank"
+      >supports HTML5 video</a
+    >
+  </p>
+</video>
+<img class='img img__logo' id='logoImg' src="./../../assets/Images/logo.jpg" alt="">
+<app-start-over></app-start-over>
+<app-action-button-plugin *ngIf="true"  ></app-action-button-plugin>
+
+</div>
+
+
+
+
+

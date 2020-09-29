@@ -1,0 +1,15 @@
+
+<div  *ngIf="showVideoDivMenu1"  class="div__menu-1 div__menu-1--dark" id="menu01">
+  <button    tabindex="1" class="btn btn__action-1 btn__action-1--record" (click)="ActionAthRecMenuClk()" >
+    <i class="i__icon i__icon--record fas fa-microphone"></i> Record
+    </button>
+    <button class="btn btn__action-2 btn__action-2--athPdf" tabindex="2"  (click)="ActionAthFileClk()">
+    <i class="i__icon i__icon--pdf fas fa-file-pdf"></i> Attach PDF
+    </button>
+    <button tabindex="3"  class="btn btn__action-3 btn__action-3--wrtNote" (click)="ActionAdNtClk()"> <i id="trash" class="i__icon i__icon--notes fas fa-pen"></i>Add Notes
+    </button>
+
+</div>
+<app-action-attach-file #appActionAthFile></app-action-attach-file>
+<app-action-add-notes #appActionAddNotes></app-action-add-notes>
+<app-action-record #appActionRecFile></app-action-record>

@@ -1,0 +1,30 @@
+<div *ngIf="alertShow"  [ngClass]="success ? 'alert-success':'alert-danger'"  class="alert   div div__alert" role="alert">
+  <strong>{{title}}</strong> {{description}}
+  <button (click)="onCloseButtonClic()"  type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div *ngIf="showNotes">
+   <!-- Alert Div -->
+
+    <div class='div__notes' >
+
+    <!-- Note Div -->
+    <h4>Notes</h4>
+        <textarea
+        [(ngModel)]="notesText1"
+        class="form-control"
+        id="NoteTextArea1"
+        rows="4"
+        ></textarea>
+        <p class="card-text">
+        Write something,don't worry i'll remind for you
+        </p>
+        <button (click)='onAddNoteButtonClick()' class="btn btn-primary btn__note--addNotes" ><i class="fa fa-plus i__noteIcons i__noteIcons--add" aria-hidden="true"></i>Add Notes</button>
+        <button (click)='onCloseButtonClick()'class="btn btn-primary btn__cancel--cancel" ><i class="fa fa-times i__noteIcons i__noteIcons--times " aria-hidden="true"></i>
+        Close</button>
+      </div>
+</div>
+
+

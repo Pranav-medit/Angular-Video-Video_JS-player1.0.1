@@ -1,0 +1,55 @@
+:host{
+  font-size: .9rem;
+}
+html body div.div__menu-1--dark{
+  width:100px;
+  height:80px;
+  display:block;
+  position: absolute ;
+  background-color: rgba(43, 51, 63, 0.7);
+  bottom:0;
+  right:40px;
+  z-index:1;
+  margin-bottom:30px;
+  overflow: hidden;
+}
+div.div__menu-1{
+  width:120px;
+  height:120px;
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: rgba(43, 51, 63, 0.7);
+  bottom:0;
+  right:40px;
+  z-index:1;
+  margin-bottom:30px;
+
+}
+div.div__menu-1--dark button.btn__action-1--record,button.btn__action-2--athPdf,button.btn__action-3--wrtNote{
+  padding:0;
+  color:white;
+  letter-spacing: 1px;
+  background-color: rgba(43, 51, 63, 0);
+  font-size: inherit;
+  line-height: .5em;
+  text-align: left;
+  width:100%;
+  flex: 1;
+  /* height:50px; */
+}
+div.div__menu-1--dark button.btn__action-1--record:hover,button.btn__action-2--athPdf:hover,button.btn__action-3--wrtNote:hover{
+  background-color: white;
+  color:black;
+}
+div.div__menu-1--dark .i__icon{
+  display:inline-block;
+  font-size:1em;
+  margin-right:6px;
+  margin-left:6px;
+}
+/* @media(min-width:800px){
+  :host{
+    font-size: 2rem;
+  }
+} */

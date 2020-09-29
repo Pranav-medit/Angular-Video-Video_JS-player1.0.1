@@ -1,0 +1,34 @@
+<div *ngIf="alertShow"  [ngClass]="success ? 'alert-success':'alert-danger'"  class="alert alert-warning  div div__alert" role="alert">
+  <strong>{{title}}</strong> {{description}}
+  <button (click)="onCloseButtonClic()"  type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div *ngIf="showAthFile" >
+
+    <div id="dropArea"  class="div div__dropArea div__dropArea--white">
+      <button class="btn btn__close btn__close--red" (click)="onCloseButtonClick()">Close<i class="fas fa-times i__icon i__icon--close"></i></button>
+      <p class="p__drgndrp">Drag and drop your Photos/PDF</p>
+
+      <form #tag class="form form__fileUpload">
+
+        <input type="file" id="fileField" multiple accept=".pdf,.doc,.docx,image/*" >
+        <label class="btn btn__choosefile btn__close--blue" for="fileField"><i class="fas fa-file-upload"></i> Choose File(s)</label>
+        <progress  [value]='progresBarVal' id="progress-bar"
+        #progressBar max=100 ></progress><span #progressPercent >0%</span>
+
+      </form>
+      <div  #divDropArea [ngClass]="addBorderStyle ? 'addBorderStyle' : 'danger'"  class="div div__dropHere" >
+        <p class="p p__dropHere"  id='dropText'>Drop Here</p>
+      </div>
+      <div  class="div div__gallery" id="gallery" >
+        <div *ngFor="let Img of galleryImg"  class="div div__imgCover imgCover">
+          <img class='img img__fileImage' [src]="Img.Source" alt="">
+          <p>{{Img.Name}}</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+

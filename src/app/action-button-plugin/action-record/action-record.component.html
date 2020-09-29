@@ -1,0 +1,20 @@
+
+<div *ngIf="showRecMenu" class="div div__recWrap recordWrapper">
+      <button
+      (click)="onCloseButtonClick()"  id='recClose'><i class="fas fa-times clsDrpBtn"></i>Close</button>
+       <div class="div div_recordTxtDisp recordText">
+      <h3 [innerText]='recordStatusText' id="recTxt">Record</h3>
+      <p *ngIf="recordTime"  [innerText]='recordTime' id="recTim">00:00</p>
+      </div>
+      <div class="div div__recContWrap recordContainerWrapper">
+      <div class="div div__recCont" id="recordContainer">
+          <div id="recrdButton" (click)="recAudio()" >
+            <i *ngIf="startRecordIcon" id="recordStartIcon"  class="fas fa-microphone-alt"></i>
+            <i *ngIf="!startRecordIcon"  class="far fa-stop-circle"  id="recordStopIcon"></i>
+          </div>
+      </div>
+      <hr>
+          <div class='div div__audioGallery' id="displayRecordedAudio">
+            <audio *ngFor="let audio of audioList"  controls> <source [src]="audio" type="audio/mp3"></audio>
+      </div>
+</div>
